@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Socket.io Basics</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-  <a href="index.html">Change Settings</a>
-  <h1 class="room-title"><!-- Room Name (use jQuery)--></h1>
-  <div class="messages">
-    <!-- Messages go here -->
+  <div class="container">
+    <a href="index.html">Change Settings</a>
+    <h1 class="room-title"><!-- Room Name (use jQuery)--></h1>
+    <div class="messages">
+      <!-- Messages go here -->
+    </div>
+
+    <form id="message-form">
+      <div class="form-group">
+        <input type="text" name="message" />
+        <input type="submit" />
+      </div>
+    </form>
+    <script src="/js/jquery-2.2.2.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="/js/QueryParams.js"></script>
+    <script src="/js/app.js"></script>
+
   </div>
-
-  <form id="message-form">
-    <input type="text" name="message" />
-    <input type="submit" />
-  </form>
-  <script src="/js/jquery-2.2.2.min.js"></script>
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
-  <script src="/js/QueryParams.js"></script>
-  <script src="/js/app.js"></script>
-
-
 </body>
 </html>
