@@ -13,10 +13,13 @@ socket.on('connect', function() {
 socket.on('message', function(message) {
   var momentTimestamp = moment.utc(message.timestamp);
   var $messages = $('.messages');
+  var $message = $('<li class="list-group-item"></li>')
   console.log('New Message: ' + message.text);
 
-  $messages.append("<p><strong>" + message.name + ' ' + momentTimestamp.local().format("h:mm a") + "</strong></p>");
-  $messages.append("<p>" + message.text + "</p>");
+  $message.append("<p><strong>" + message.name + ' ' + momentTimestamp.local().format("h:mm a") + "</strong></p>");
+  $message.append("<p>" + message.text + "</p>");
+
+  $messages.append($message);
 });
 
 // Handles submitting of new message
